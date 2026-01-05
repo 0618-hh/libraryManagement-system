@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StatisticsWidget</class>
+ <widget class="QWidget" name="StatisticsWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>数据统计</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>6</number>
+   </property>
+   <property name="leftMargin">
+    <number>9</number>
+   </property>
+   <property name="topMargin">
+    <number>9</number>
+   </property>
+   <property name="rightMargin">
+    <number>9</number>
+   </property>
+   <property name="bottomMargin">
+    <number>9</number>
+   </property>
+   <item>
+    <widget class="QGroupBox" name="statsGroup">
+     <property name="title">
+      <string>统计信息</string>
+     </property>
+     <layout class="QHBoxLayout" name="statsLayout">
+      <item>
+       <widget class="QLabel" name="totalBooksLabel">
+        <property name="text">
+         <string>图书总数: 0</string>
+        </property>
+        <property name="styleSheet">
+         <string>font-size: 14px; font-weight: bold;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="totalReadersLabel">
+        <property name="text">
+         <string>读者总数: 0</string>
+        </property>
+        <property name="styleSheet">
+         <string>font-size: 14px; font-weight: bold;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="totalBorrowsLabel">
+        <property name="text">
+         <string>借阅总数: 0</string>
+        </property>
+        <property name="styleSheet">
+         <string>font-size: 14px; font-weight: bold;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="overdueBorrowsLabel">
+        <property name="text">
+         <string>逾期数量: 0</string>
+        </property>
+        <property name="styleSheet">
+         <string>font-size: 14px; font-weight: bold; color: red;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="topLayout">
+     <item>
+      <widget class="QGroupBox" name="topBooksGroup">
+       <property name="title">
+        <string>热门图书 (借阅次数)</string>
+       </property>
+       <layout class="QVBoxLayout" name="topBooksLayout">
+        <item>
+         <widget class="QTableWidget" name="topBooksTable">
+          <property name="columnCount">
+           <number>3</number>
+          </property>
+          <property name="rowCount">
+           <number>0</number>
+          </property>
+          <column>
+           <property name="text">
+            <string>排名</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>书名</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>借阅次数</string>
+           </property>
+          </column>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="topReadersGroup">
+       <property name="title">
+        <string>活跃读者 (借阅次数)</string>
+       </property>
+       <layout class="QVBoxLayout" name="topReadersLayout">
+        <item>
+         <widget class="QTableWidget" name="topReadersTable">
+          <property name="columnCount">
+           <number>3</number>
+          </property>
+          <property name="rowCount">
+           <number>0</number>
+          </property>
+          <column>
+           <property name="text">
+            <string>排名</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>读者姓名</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>借阅次数</string>
+           </property>
+          </column>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="overdueGroup">
+     <property name="title">
+      <string>逾期借阅记录</string>
+     </property>
+     <layout class="QVBoxLayout" name="overdueLayout">
+      <item>
+       <widget class="QTableWidget" name="overdueTable">
+        <property name="columnCount">
+         <number>5</number>
+        </property>
+        <property name="rowCount">
+         <number>0</number>
+        </property>
+        <column>
+         <property name="text">
+          <string>ID</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>图书</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>读者</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>应还日期</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>逾期天数</string>
+         </property>
+        </column>
+        <property name="alternatingRowColors">
+         <bool>true</bool>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectRows</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="refreshButton">
+     <property name="text">
+      <string>刷新统计</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,10 @@
+# Qt
+*.user
+*.user.*
+build/
+debug/
+release/
+
+# 系统文件
+.DS_Store
+Thumbs.db

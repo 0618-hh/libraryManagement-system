@@ -4,6 +4,7 @@ CONFIG += c++17
 
 TARGET = Rent
 TEMPLATE = app
+CONFIG += qt c++17 release  # 这里添加 release
 
 SOURCES += \
     main.cpp \
@@ -15,7 +16,8 @@ SOURCES += \
     bookwidget.cpp \
     readerwidget.cpp \
     borrowwidget.cpp \
-    statisticswidget.cpp
+    statisticswidget.cpp \
+    logindialog.cpp
 
 HEADERS += \
     mainwindow.h \
@@ -26,14 +28,16 @@ HEADERS += \
     bookwidget.h \
     readerwidget.h \
     borrowwidget.h \
-    statisticswidget.h
+    statisticswidget.h \
+    logindialog.h
 
 FORMS += \
     mainwindow.ui \
     bookwidget.ui \
     readerwidget.ui \
     borrowwidget.ui \
-    statisticswidget.ui
+    statisticswidget.ui \
+    logindialog.ui
 
 RESOURCES += \
     resources.qrc
